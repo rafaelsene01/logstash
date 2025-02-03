@@ -17,8 +17,10 @@ services:
     #   - elasticsearch
     ports:
       - "5044:5044" # Expose Logstash HTTP input
+    # volumes:
+    #   - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     volumes:
-      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - "/data/coolify/applications/ggc4cwo0ksc8ks00ow04cg4s/logstash.conf:/usr/share/logstash/pipeline/logstash.conf"
 
   # kibana:
   #   image: docker.elastic.co/kibana/kibana:8.11.0
