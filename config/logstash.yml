@@ -1,0 +1,6 @@
+http.host: "0.0.0.0"
+
+node.name: logstash
+
+xpack.monitoring.elastcsearch.hosts: ["https://elastic.rafaelsene.com"]
+xpack.monitoring.enabled: true
