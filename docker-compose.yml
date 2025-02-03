@@ -18,8 +18,8 @@ services:
     ports:
       - "5044:5044" # Expose Logstash HTTP input
     volumes:
-      - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-      - ./pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro
+      - ./config:/usr/share/logstash/config:ro
+      - ./pipeline:/usr/share/logstash/pipeline:ro
 
   # kibana:
   #   image: docker.elastic.co/kibana/kibana:8.11.0
