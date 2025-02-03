@@ -18,7 +18,7 @@ services:
     ports:
       - "5044:5044" # Expose Logstash HTTP input
     volumes:
-      - ./pipeline/config/logstash.yml:/usr/share/logstash/config/:ro
+      - ./config/logstash.yml:/usr/share/logstash/config/:ro
       - ./pipeline/logstash.conf:/usr/share/logstash/pipeline/:ro
 
   # kibana:
