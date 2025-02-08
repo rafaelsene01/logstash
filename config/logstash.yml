@@ -2,5 +2,5 @@ http.host: "0.0.0.0"
 
 node.name: logstash
 
-xpack.monitoring.elastcsearch.hosts: ["https://elastic.rafaelsene.com"]
+xpack.monitoring.elastcsearch.hosts: ["http://es01:9200"]
 xpack.monitoring.enabled: true
