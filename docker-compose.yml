@@ -1,6 +1,6 @@
 services:
   es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.6.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.14.3
     container_name: es01
     ports:
       - 9200:9200
@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:8.6.0
+    image: docker.elastic.co/logstash/logstash:8.14.3
     container_name: logstash
     volumes:
       # - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
@@ -42,16 +42,16 @@ services:
     restart: unless-stopped
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:8.6.0
+    image: docker.elastic.co/kibana/kibana:8.14.3
     container_name: kibana
     ports:
       - 5601:5601
     environment:
       ELASTICSEARCH_URL: http://es01:9200
       ELASTICSEARCH_HOSTS: http://es01:9200
-      KIBANA_PLUGINS: mapsEms
-    volumes:
-      - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+      # KIBANA_PLUGINS: mapsEms
+    # volumes:
+    #   - ./kibana.yml:/usr/share/kibana/config/kibana.yml
     networks:
       - elk
     depends_on:
