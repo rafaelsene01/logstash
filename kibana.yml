@@ -1,1 +1,3 @@
 xpack.maps.enabled: true
+elasticsearch.username: "elastic"
+elasticsearch.password: "changeme"
