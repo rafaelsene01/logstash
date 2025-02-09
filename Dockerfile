@@ -4,4 +4,4 @@ FROM docker.elastic.co/logstash/logstash:8.10.2
 RUN bin/logstash-plugin install logstash-output-mongodb
 
 # Copia o arquivo de configuração para dentro do container
-COPY ./pipeline/logstash.conf /usr/share/logstash/pipeline/logstash.conf
+COPY pipeline /usr/share/logstash/pipeline/
