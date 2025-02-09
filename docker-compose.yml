@@ -9,4 +9,4 @@ services:
     environment:
       - MONGO_URI=
     volumes:
-      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
